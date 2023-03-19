@@ -1,0 +1,36 @@
+Create a new env => python3 -m venv ./venv 
+Activate env => source ./venv/bin/activate
+Install django with pip inside of env => pip install django==2.2
+Show some command => django-admin help
+Start new project => django-admin startproject btre .
+Show some command with django => python manage.py help
+
+====RUN SERVER=====
+Run server => python manage.py runserver
+Create new app => python manage.py startapp pages
+Install autopep8 => pip install autopep8
+Copy assest or static file to the root the project => python manage.py collectstatic
+Creating listings App => python manage.py startapp listings
+Install postgres inside the project => pip install psycopg2 and pip install psycopg2-binary
+Install Pillow for handle images => pip install Pillow
+To see all package installed in the project => pip freeze
+
+===MIGRATIONS===
+Run my migrations => python manage.py migrate
+Create files for my own migrations => python manage.py makemigrations
+Create SQL => python manage.py sqlmigrate listings 0001
+Run my own migrations => python manage.py migrate
+Create super user => python manage.py createsuperuser
+
+===Admin Area===
+Create super user => python manage.py createsuperuser
+Username => cesar
+Password => Source1!
+
+===Create accounts app===
+python manage.py startapp accounts
+
+===Create contacts app===
+python manage.py startapp contacts
+Create migrations from models => python manage.py makemigrations
+Run migrations => python manage.py migrate
