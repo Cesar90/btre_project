@@ -34,3 +34,37 @@ python manage.py startapp accounts
 python manage.py startapp contacts
 Create migrations from models => python manage.py makemigrations
 Run migrations => python manage.py migrate
+
+@@@@DEPLOY IN DO@@@@
+ssh root@IP_ADDRESS
+
+Create user => adduser djangoadmin 
+-- Example => 1234567a
+
+Give root privileges => usermod -aG sudo djangoadmin
+
+Add SSH key for new user =>
+cd /home/djangoadmin
+mkdir .ssh
+cd .ssh
+nano 
+
+Disable root login => sudo nano /etc/ssh/sshd_config
+
+Reload sshd service
+
+sudo systemctl reload sshd
+
+SIMPLE FIREWALL SETUP
+
+See which apps are registered with the firewall
+  sudo ufw app list
+
+Allow OpenSSH
+  sudo ufw allow OpenSSH
+
+Enable firewall
+  sudo ufw enable
+
+To check status
+  sudo ufw status
